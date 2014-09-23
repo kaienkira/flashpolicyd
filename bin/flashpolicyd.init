@@ -1,11 +1,13 @@
 #!/bin/bash
+# chkconfig: 2345 90 10
+# description: flashpolicyd
 
 script_name=`basename $0`
 script_ads_name=`readlink -f $0`
 script_path=`dirname $script_ads_name`
 
 desc=flashpolicyd
-pid_file=/run/flashpolicyd.pid
+pid_file=/var/run/flashpolicyd.pid
 prog=${script_path}/flashpolicyd
 args="-l 0.0.0.0 -p 843 --pidfile $pid_file"
 wait_tick=0.1

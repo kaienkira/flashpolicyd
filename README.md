@@ -25,6 +25,11 @@ on ubuntu
 $ sudo update-rc.d flashpolicyd defaults
 $ sudo service flashpolicyd start
 ```
+on centos
+```
+$ sudo chkconfig --add flashpolicyd
+$ sudo service flashpolicyd start
+```
 
 test
 ```
