@@ -23,6 +23,8 @@ public:
             &PolicyServer::onPeerClose, this));
         tcp_service_.setErrorCallback(BRICKRED_BIND_MEM_FUNC(
             &PolicyServer::onError, this));
+
+        tcp_service_.setRecvBufferMaxSize(1024);
     }
 
     ~PolicyServer()
