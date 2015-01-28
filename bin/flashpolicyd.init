@@ -3,8 +3,8 @@
 # description: flashpolicyd
 
 script_name=`basename $0`
-script_ads_name=`readlink -f $0`
-script_path=`dirname $script_ads_name`
+script_abs_name=`readlink -f $0`
+script_path=`dirname $script_abs_name`
 
 desc=flashpolicyd
 pid_file=/var/run/flashpolicyd.pid
